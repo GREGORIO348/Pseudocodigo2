@@ -1,0 +1,31 @@
+Algoritmo Bono_a
+	Definir antiguedad, sueldo, bonoAntiguedad, bonoSueldo, bonoFinal Como Real
+	Escribir 'Ingrese la antigüedad del trabajador (en años):'
+	Leer antiguedad
+	Escribir 'Ingrese el sueldo del trabajador:'
+	Leer sueldo
+	Si antiguedad>2 Y antiguedad<5 Entonces
+		bonoAntiguedad <- sueldo*0.20
+	SiNo
+		Si antiguedad>=5 Entonces
+			bonoAntiguedad <- sueldo*0.30
+		SiNo
+			bonoAntiguedad <- 0
+		FinSi
+	FinSi
+	Si sueldo<1000 Entonces
+		bonoSueldo <- sueldo*0.25
+	SiNo
+		Si sueldo>1000 Y sueldo<=3500 Entonces
+			bonoSueldo <- sueldo*0.15
+		SiNo
+			bonoSueldo <- sueldo*0.10
+		FinSi
+	FinSi
+	Si bonoAntiguedad>bonoSueldo Entonces
+		bonoFinal <- bonoAntiguedad
+	SiNo
+		bonoFinal <- bonoSueldo
+	FinSi
+	Escribir 'El bono final del trabajador es:', bonoFinal
+FinAlgoritmo
